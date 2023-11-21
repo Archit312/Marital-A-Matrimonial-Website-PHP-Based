@@ -340,7 +340,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             <div class="view_profile" id="similar_profile">
                                 <h3>View Similar Profiles</h3>
                                 <?php
-                                $rs2 = mysqli_query($conn, "select * from profile where email<>'$email' ORDER BY RAND() LIMIT 0,5");
+                                $rs2 = mysqli_query($conn, "select * from profile where email<>'$email' AND code<>'$code' ORDER BY RAND() LIMIT 0,5");
                                 while ($r2 = mysqli_fetch_array($rs2)) {
                                 ?>
                                     <ul class="profile_item">
@@ -359,61 +359,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 <?php
                                 }
                                 ?>
-                            </div>
-                            <div class="view_profile view_profile1">
-                                <h3>Members who viewed this profile also viewed</h3>
-                                <ul class="profile_item">
-                                    <a href="#">
-                                        <li class="profile_item-img">
-                                            <img src="images/p9.jpg" class="img-responsive" alt="" />
-                                        </li>
-                                        <li class="profile_item-desc">
-                                            <h4>2458741</h4>
-                                            <p>29 Yrs, 5Ft 5in Christian</p>
-                                            <h5>View Full Profile</h5>
-                                        </li>
-                                        <div class="clearfix"> </div>
-                                    </a>
-                                </ul>
-                                <ul class="profile_item">
-                                    <a href="#">
-                                        <li class="profile_item-img">
-                                            <img src="images/p10.jpg" class="img-responsive" alt="" />
-                                        </li>
-                                        <li class="profile_item-desc">
-                                            <h4>2458741</h4>
-                                            <p>29 Yrs, 5Ft 5in Christian</p>
-                                            <h5>View Full Profile</h5>
-                                        </li>
-                                        <div class="clearfix"> </div>
-                                    </a>
-                                </ul>
-                                <ul class="profile_item">
-                                    <a href="#">
-                                        <li class="profile_item-img">
-                                            <img src="images/p11.jpg" class="img-responsive" alt="" />
-                                        </li>
-                                        <li class="profile_item-desc">
-                                            <h4>2458741</h4>
-                                            <p>29 Yrs, 5Ft 5in Christian</p>
-                                            <h5>View Full Profile</h5>
-                                        </li>
-                                        <div class="clearfix"> </div>
-                                    </a>
-                                </ul>
-                                <ul class="profile_item">
-                                    <a href="#">
-                                        <li class="profile_item-img">
-                                            <img src="images/p12.jpg" class="img-responsive" alt="" />
-                                        </li>
-                                        <li class="profile_item-desc">
-                                            <h4>2458741</h4>
-                                            <p>29 Yrs, 5Ft 5in Christian</p>
-                                            <h5>View Full Profile</h5>
-                                        </li>
-                                        <div class="clearfix"> </div>
-                                    </a>
-                                </ul>
                             </div>
                         </div>
                             <div class="clearfix"> </div>

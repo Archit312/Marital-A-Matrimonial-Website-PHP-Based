@@ -26,13 +26,7 @@ if (isset($_COOKIE["login"])) {
                             <ul class="nav navbar-nav nav_1">
                                 <li><a href="profile.php">Home</a></li>
                                 <li><a href="search.php">Search</a></li>
-                                <li class="dropdown">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Matches<span class="caret"></span></a>
-                                    <ul class="dropdown-menu" role="menu">
-                                        <li><a href="liked_profiles.php">Liked Profiles</a></li>
-                                        <li><a href="recently_view.php">Recently Viewed Profiles</a></li>
-                                    </ul>
-                                </li>
+                                <li><a href="liked_profiles.php">Liked Profiles</a></li>
                                 <li class="dropdown">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Messages<span class="caret"></span></a>
                                     <ul class="dropdown-menu" role="menu">

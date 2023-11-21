@@ -92,7 +92,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     </div>
                     <div class="profile">
                         <div class="col-md-8 profile_left" id="record">
-                            <!-- <?php
+                            <?php
                                     if (isset($_GET['success'])) {
                                     ?>
                                 <div class="alert alert-success">Profile Updated</div>
@@ -105,8 +105,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             ?>
                                 <div class="alert alert-success">Password Updated</div>
                             <?php
-                                    }
-                            ?> -->
+                                    } else if(isset($_GET['save_story'])){
+                            ?>
+                                <div class="alert alert-success">Success Story Saved</div>
+                            <?php                             
+                                  }
+                            ?>
                             <h2>Profile Id : <?= $r["code"] ?></h2>
                             <div class="col_3">
                                 <div class="col-sm-4 row_2">
@@ -295,6 +299,18 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             <?php
                             }
                             ?>
+                            <hr>
+                            <div class='row'>
+                                <div class="col-sm-12">
+                                    <label><h4>Success Story :-</h4></label>
+                                    <form action="save_story.php?id=<?=$r["code"]?>" method="post">
+                                        <div class="form-group">
+                                            <textarea name="success" id="" cols="" class='form-control' rows="5"></textarea>
+                                        </div>
+                                        <button type="submit" class="btn btn-danger" style="float: right;">Save</button>
+                                    </form>
+                                </div>
+                            </div>
                         </div>
                         <div class="col-md-4 profile_right">
                             <div class="newsletter">
@@ -303,7 +319,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             <div class="view_profile" id="similar_profile">
                                 <h3>View Similar Profiles</h3>
                                 <?php
-                                $rs2 = mysqli_query($conn, "select * from profile where email<>'$email' ORDER BY RAND() LIMIT 0,5");
+                                $rs2 = mysqli_query($conn, "select * from profile where email<>'$email' ORDER BY RAND() LIMIT 0,9 ");
                                 while ($r2 = mysqli_fetch_array($rs2)) {
                                 ?>
                                     <ul class="profile_item">
@@ -322,61 +338,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 <?php
                                 }
                                 ?>
-                            </div>
-                            <div class="view_profile view_profile1">
-                                <h3>Members who viewed this profile also viewed</h3>
-                                <ul class="profile_item">
-                                    <a href="#">
-                                        <li class="profile_item-img">
-                                            <img src="images/p9.jpg" class="img-responsive" alt="" />
-                                        </li>
-                                        <li class="profile_item-desc">
-                                            <h4>2458741</h4>
-                                            <p>29 Yrs, 5Ft 5in Christian</p>
-                                            <h5>View Full Profile</h5>
-                                        </li>
-                                        <div class="clearfix"> </div>
-                                    </a>
-                                </ul>
-                                <ul class="profile_item">
-                                    <a href="#">
-                                        <li class="profile_item-img">
-                                            <img src="images/p10.jpg" class="img-responsive" alt="" />
-                                        </li>
-                                        <li class="profile_item-desc">
-                                            <h4>2458741</h4>
-                                            <p>29 Yrs, 5Ft 5in Christian</p>
-                                            <h5>View Full Profile</h5>
-                                        </li>
-                                        <div class="clearfix"> </div>
-                                    </a>
-                                </ul>
-                                <ul class="profile_item">
-                                    <a href="#">
-                                        <li class="profile_item-img">
-                                            <img src="images/p11.jpg" class="img-responsive" alt="" />
-                                        </li>
-                                        <li class="profile_item-desc">
-                                            <h4>2458741</h4>
-                                            <p>29 Yrs, 5Ft 5in Christian</p>
-                                            <h5>View Full Profile</h5>
-                                        </li>
-                                        <div class="clearfix"> </div>
-                                    </a>
-                                </ul>
-                                <ul class="profile_item">
-                                    <a href="#">
-                                        <li class="profile_item-img">
-                                            <img src="images/p12.jpg" class="img-responsive" alt="" />
-                                        </li>
-                                        <li class="profile_item-desc">
-                                            <h4>2458741</h4>
-                                            <p>29 Yrs, 5Ft 5in Christian</p>
-                                            <h5>View Full Profile</h5>
-                                        </li>
-                                        <div class="clearfix"> </div>
-                                    </a>
-                                </ul>
                             </div>
                         </div>
                         <div class="clearfix"> </div>
