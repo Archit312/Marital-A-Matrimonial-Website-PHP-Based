@@ -34,3 +34,9 @@ Bootstrap 4
 
 🚀 Outcome:
 The matrimonial website successfully connected countless individuals on their journey to finding life partners, providing a reliable and feature-rich platform that prioritizes user experience and security.
+
+How to Run:
+
+1. Clone the repository.
+2. Set up a MySQL database and configure the connection in the project.
+3. Deploy the project on a PHP-compatible server.
